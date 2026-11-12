@@ -1,1 +1,274 @@
 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بهتيم الثانوية بنين</title>
+  <link rel="icon" href="assets/school-logo.png">
+  <style>
+    :root {
+      --navy: #101f36;
+      --navy2: #172c49;
+      --gold: #d5aa48;
+      --white: #fff;
+      --olive: #414b35;
+      --light: #f4f5f7;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Tahoma, Arial, sans-serif;
+      background: var(--light);
+      color: #202b3b;
+      line-height: 1.8;
+    }
+
+    header {
+      background: var(--navy);
+      color: white;
+      padding: 14px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      border-bottom: 3px solid var(--gold);
+    }
+
+    .brand { display: flex; align-items: center; gap: 13px; }
+    .brand img { width: 65px; height: 65px; object-fit: contain; }
+    .brand h1 { font-size: 21px; color: var(--gold); }
+    .brand p { font-size: 12px; color: #e1e5eb; }
+
+    nav { display: flex; gap: 18px; flex-wrap: wrap; }
+    nav a {
+      color: white; text-decoration: none;
+      font-size: 14px; transition: .2s;
+    }
+    nav a:hover { color: var(--gold); }
+
+    .hero {
+      min-height: 480px;
+      padding: 85px 8%;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(110deg, #101f36 0%, #172c49 75%, #34412f 100%);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-content { max-width: 720px; position: relative; z-index: 1; }
+    .hero .tag {
+      color: var(--gold); font-weight: bold;
+      letter-spacing: 1px; margin-bottom: 15px;
+    }
+    .hero h2 { font-size: clamp(30px, 5vw, 52px); line-height: 1.4; }
+    .hero h2 span { color: var(--gold); }
+    .hero p { margin: 20px 0; color: #e1e6ee; font-size: 17px; }
+    .btn {
+      display: inline-block; padding: 11px 25px;
+      background: var(--gold); color: var(--navy);
+      text-decoration: none; border-radius: 7px;
+      font-weight: bold; margin-top: 10px;
+    }
+
+    section { padding: 65px 8%; }
+    .section-title { text-align: center; margin-bottom: 35px; }
+    .section-title h2 { color: var(--navy); font-size: 30px; }
+    .section-title span {
+      display: block; width: 65px; height: 4px;
+      background: var(--gold); margin: 10px auto;
+      border-radius: 5px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white; padding: 25px;
+      border-radius: 12px; border: 1px solid #e7e9ed;
+      box-shadow: 0 5px 18px #15243a0d;
+      transition: .25s;
+    }
+    .card:hover { transform: translateY(-5px); border-color: var(--gold); }
+    .card h3 { color: var(--navy); margin-bottom: 10px; }
+    .card p { color: #657080; font-size: 14px; }
+
+    .about { background: white; }
+    .about-content {
+      max-width: 850px; margin: auto; text-align: center;
+      font-size: 17px; color: #586272;
+    }
+
+    .tracks { background: #eef0f3; }
+    .track-card { border-top: 4px solid var(--gold); }
+    .track-card h3 { color: var(--olive); }
+
+    .management { background: var(--navy); color: white; }
+    .management .section-title h2 { color: white; }
+    .management .card { text-align: center; }
+    .management .card h3 { color: var(--navy); }
+    .management .role { color: var(--olive); font-weight: bold; }
+
+    footer {
+      background: #0b1728; color: #dce2eb;
+      text-align: center; padding: 25px 15px;
+      border-top: 3px solid var(--gold);
+    }
+    footer img { width: 55px; margin-bottom: 8px; }
+
+    @media(max-width: 650px) {
+      header { justify-content: center; text-align: center; }
+      .brand { justify-content: center; }
+      nav { justify-content: center; gap: 12px; }
+      .hero { min-height: 400px; padding: 65px 7%; text-align: center; }
+      section { padding: 48px 6%; }
+      .brand h1 { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <img src="assets/school-logo.png" alt="شعار المدرسة">
+    <div>
+      <h1>بهتيم الثانوية بنين</h1>
+      <p>العلم أساس التقدم وبناء المستقبل</p>
+    </div>
+  </div>
+  <nav>
+    <a href="#home">الرئيسية</a>
+    <a href="#about">عن المدرسة</a>
+    <a href="#general">الثانوية العامة</a>
+    <a href="#baccalaureate">البكالوريا</a>
+    <a href="#management">الإدارة</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="tag">مدرسة بهتيم الثانوية بنين</div>
+      <h2>نصنع اليوم... <span>قادة المستقبل</span></h2>
+      <p>
+        بيئة تعليمية تهدف إلى بناء جيل واعٍ ومبدع،
+        يمتلك المعرفة والمهارات اللازمة لصناعة مستقبل أفضل.
+      </p>
+      <a class="btn" href="#about">اكتشف المدرسة</a>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="section-title">
+      <h2>عن المدرسة</h2>
+      <span></span>
+    </div>
+    <div class="about-content">
+      <p>
+        ترحب مدرسة بهتيم الثانوية بنين بطلابها وزوارها.
+        نسعى إلى توفير تجربة تعليمية متميزة تجمع بين
+        التفوق الدراسي وتنمية المهارات والإبداع،
+        وإعداد الطلاب لمتطلبات المستقبل.
+      </p>
+    </div>
+  </section>
+
+  <section id="general">
+    <div class="section-title">
+      <h2>الثانوية العامة</h2>
+      <span></span>
+      <p>التعليم والتأهيل للمرحلة الجامعية</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h3>الشعبة العلمية</h3>
+        <p>التركيز على العلوم والرياضيات والاستعداد للتخصصات العلمية.</p>
+      </div>
+      <div class="card">
+        <h3>الشعبة الأدبية</h3>
+        <p>التركيز على المواد الإنسانية واللغات والعلوم الاجتماعية.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tracks" id="baccalaureate">
+    <div class="section-title">
+      <h2>البكالوريا المصرية</h2>
+      <span></span>
+      <p>مسارات تعليمية متنوعة لاكتشاف قدرات الطلاب</p>
+    </div>
+    <div class="cards">
+      <div class="card track-card">
+        <h3>الطب وعلوم الحياة</h3>
+        <p>مسار يهتم بالعلوم الحيوية والصحية ومجالات الطب والحياة.</p>
+      </div>
+      <div class="card track-card">
+        <h3>الهندسة وعلوم الحاسب</h3>
+        <p>مسار يهتم بالتكنولوجيا والهندسة والبرمجة وعلوم الحاسب.</p>
+      </div>
+      <div class="card track-card">
+        <h3>الأعمال</h3>
+        <p>مسار يهتم بالاقتصاد والإدارة والمحاسبة ومجالات الأعمال.</p>
+      </div>
+      <div class="card track-card">
+        <h3>الآداب والفنون</h3>
+        <p>مسار يهتم باللغات والعلوم الإنسانية والإبداع والفنون.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="subjects">
+    <div class="section-title">
+      <h2>المواد الدراسية</h2>
+      <span></span>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h3>المواد الأساسية</h3>
+        <p>اللغة العربية، اللغة الأجنبية، والتربية الدينية والوطنية وفق النظام الدراسي المعتمد.</p>
+      </div>
+      <div class="card">
+        <h3>المواد التخصصية</h3>
+        <p>تختلف المواد التخصصية حسب المسار والصف الدراسي ونظام الدراسة المعتمد.</p>
+      </div>
+      <div class="card">
+        <h3>المصادر التعليمية</h3>
+        <p>تابع الإعلانات الرسمية والمصادر المعتمدة لمعرفة تفاصيل المواد والمناهج.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="management" id="management">
+    <div class="section-title">
+      <h2>إدارة المدرسة</h2>
+      <span></span>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h3>الأستاذ مجدي علي حسن</h3>
+        <p class="role">مدير المدرسة</p>
+      </div>
+      <div class="card">
+        <h3>الأستاذة سمر مصطفى</h3>
+        <p class="role">مسؤولة التواصل</p>
+        <p>يرجى التواصل من خلال قنوات المدرسة الرسمية.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <img src="assets/school-logo.png" alt="شعار المدرسة">
+  <p>مدرسة بهتيم الثانوية بنين</p>
+  <p>© جميع الحقوق محفوظة للمدرسة</p>
+</footer>
+
+</body>
+</html>
+
