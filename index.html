@@ -1,75 +1,252 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#10243d">
-  <meta name="description" content="الموقع التعريفي لمدرسة بهتيم الثانوية بنين – إدارة شرق شبرا الخيمة التعليمية">
-  <title>مدرسة بهتيم الثانوية بنين</title>
-  <link rel="icon" href="assets/school-logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>بهتيم الثانوية بنين</title>
+<meta name="description" content="الموقع الرسمي لمدرسة بهتيم الثانوية بنين">
+<style>
+:root {
+  --navy:#101f36;
+  --navy2:#1b3150;
+  --gold:#d6ad53;
+  --olive:#48543b;
+  --white:#fff;
+  --bg:#f4f6f8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Tahoma,Arial,sans-serif;
+  background:var(--bg);
+  color:#273347;
+  line-height:1.8;
+}
+header{
+  background:var(--navy);
+  color:white;
+  padding:18px 7%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:15px;
+  border-bottom:3px solid var(--gold);
+}
+.brand h1{font-size:23px;color:var(--gold)}
+.brand p{font-size:12px;color:#d8dfeb}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-size:14px}
+nav a:hover{color:var(--gold)}
+.hero{
+  min-height:480px;
+  padding:90px 8%;
+  display:flex;
+  align-items:center;
+  background:linear-gradient(120deg,var(--navy),var(--navy2),var(--olive));
+  color:white;
+}
+.hero-content{max-width:750px}
+.hero .small{color:var(--gold);font-weight:bold}
+.hero h2{font-size:clamp(32px,5vw,55px);line-height:1.4;margin:12px 0}
+.hero h2 span{color:var(--gold)}
+.hero p{font-size:17px;color:#e1e6ee;margin-bottom:25px}
+.btn{
+  display:inline-block;background:var(--gold);
+  color:var(--navy);padding:11px 25px;
+  border-radius:7px;text-decoration:none;font-weight:bold;
+}
+section{padding:65px 8%}
+.section-title{text-align:center;margin-bottom:35px}
+.section-title h2{font-size:29px;color:var(--navy)}
+.line{width:65px;height:4px;background:var(--gold);margin:10px auto;border-radius:5px}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+.card{
+  background:white;padding:25px;border-radius:12px;
+  border:1px solid #e5e8ed;
+  box-shadow:0 5px 20px #15243a0c;
+  transition:.25s;
+}
+.card:hover{transform:translateY(-5px);border-color:var(--gold)}
+.card h3{color:var(--navy);margin-bottom:10px}
+.card p{color:#687386;font-size:14px}
+.about{background:white}
+.about-text{max-width:850px;margin:auto;text-align:center;font-size:17px;color:#5b6676}
+.tracks{background:#edf0f3}
+.track{border-top:4px solid var(--gold)}
+.track h3{color:var(--olive)}
+.management{background:var(--navy)}
+.management .section-title h2{color:white}
+.management .card{text-align:center}
+.management .role{color:var(--olive);font-weight:bold}
+.announcements{background:white}
+.notice{border-right:4px solid var(--gold)}
+footer{
+  background:#0a1627;color:#dce3ed;
+  text-align:center;padding:28px 15px;
+  border-top:3px solid var(--gold);
+}
+footer strong{color:var(--gold)}
+@media(max-width:650px){
+  header{justify-content:center;text-align:center}
+  nav{justify-content:center;gap:12px}
+  .brand h1{font-size:19px}
+  .hero{text-align:center;min-height:400px;padding:65px 7%}
+  section{padding:48px 6%}
+}
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="العودة للرئيسية">
-      <img src="assets/school-logo.svg" alt="شعار مدرسة بهتيم الثانوية بنين">
-      <span><strong>مدرسة بهتيم الثانوية بنين</strong><small>إدارة شرق شبرا الخيمة التعليمية</small></span>
-    </a>
-    <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
-    <nav id="mainNav">
-      <a href="#home">الرئيسية</a><a href="#about">عن المدرسة</a><a href="#management">الإدارة</a>
-      <a href="guide.html">دليل المسارات والكليات</a><a href="#systems">المرحلة الثانوية</a><a href="#contact">تواصل معنا</a>
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <span class="eyebrow">العلم طريق المستقبل</span>
-        <h1>أهلًا بكم في <span>مدرسة بهتيم الثانوية بنين</span></h1>
-        <p>بيئة تعليمية تسعى إلى بناء المعرفة، وتنمية الشخصية، وإعداد جيل واعٍ قادر على التعلم والابتكار وخدمة المجتمع.</p>
-        <div class="hero-actions"><a class="btn primary" href="#about">اكتشف المدرسة</a><a class="btn ghost" href="#contact">تواصل معنا</a></div>
-      </div>
-      <div class="hero-mark"><img src="assets/school-logo.svg" alt="شعار المدرسة"></div>
-      <div class="hero-bottom">تعليم متميز • قيم راسخة • مستقبل واعد</div>
-    </section>
+<header>
+  <div class="brand">
+    <h1>بهتيم الثانوية بنين</h1>
+    <p>العلم أساس التقدم وبناء المستقبل</p>
+  </div>
+  <nav>
+    <a href="#home">الرئيسية</a>
+    <a href="#about">عن المدرسة</a>
+    <a href="#general">الثانوية العامة</a>
+    <a href="#baccalaureate">البكالوريا</a>
+    <a href="#announcements">الإعلانات</a>
+    <a href="#management">الإدارة</a>
+  </nav>
+</header>
 
-    <section class="section intro" id="about">
-      <div class="section-heading"><span>من نحن</span><h2>مدرسة تصنع فرقًا</h2><p>نفخر بدورنا في دعم الطلاب علميًا وتربويًا، وتشجيعهم على الاجتهاد والانضباط واكتشاف قدراتهم.</p></div>
-      <div class="feature-grid">
-        <article class="feature"><b class="feature-icon">✦</b><h3>تعليم هادف</h3><p>الاهتمام ببناء الفهم والمهارات، وليس مجرد تحصيل المعلومات.</p></article>
-        <article class="feature"><b class="feature-icon">◇</b><h3>قيم وانضباط</h3><p>ترسيخ الاحترام والمسؤولية والتعاون داخل المجتمع المدرسي.</p></article>
-        <article class="feature"><b class="feature-icon">↗</b><h3>طموح للمستقبل</h3><p>مساندة الطلاب في اكتشاف ميولهم والاستعداد لخطواتهم القادمة.</p></article>
-      </div>
-    </section>
+<main>
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="small">مرحبًا بكم في موقع المدرسة</div>
+    <h2>نصنع اليوم... <span>قادة المستقبل</span></h2>
+    <p>
+      مدرسة بهتيم الثانوية بنين، بيئة تعليمية تسعى
+      إلى بناء جيل متميز بالعلم والمعرفة والإبداع،
+      وقادر على صناعة مستقبل أفضل.
+    </p>
+    <a href="#about" class="btn">اكتشف المدرسة</a>
+  </div>
+</section>
 
-    <section class="management" id="management">
-      <div class="section-heading light"><span>قيادة المدرسة</span><h2>الإدارة المدرسية</h2><p>إدارة تعمل من أجل توفير بيئة تعليمية منظمة ومحفزة.</p></div>
-      <div class="manager-card"><div class="manager-symbol">م</div><div><small>مدير المدرسة</small><h3>الأستاذ مجدي علي حسن</h3><p>خالص التقدير لجهود الإدارة المدرسية وجميع العاملين في دعم العملية التعليمية.</p></div></div>
-    </section>
+<section class="about" id="about">
+  <div class="section-title">
+    <h2>عن المدرسة</h2><div class="line"></div>
+  </div>
+  <div class="about-text">
+    <p>
+      تسعى مدرسة بهتيم الثانوية بنين إلى تقديم تجربة
+      تعليمية متميزة، تجمع بين التحصيل الدراسي وتنمية
+      المهارات الشخصية والفكرية، مع تشجيع الطلاب على
+      الابتكار والتفوق والمشاركة الإيجابية في المجتمع.
+    </p>
+  </div>
+</section>
 
-    <section class="section" id="systems">
-      <div class="section-heading"><span>مسارك التعليمي</span><h2>المرحلة الثانوية</h2><p>معلومات إرشادية تساعد الطالب على فهم مسارات الدراسة والتخطيط لما بعد الثانوية.</p></div>
-      <div class="path-grid">
-        <article class="path-card"><div class="card-number">01</div><h3>الثانوية العامة</h3><p>تابع موادك الدراسية ومتطلبات التقييم، واهتم ببناء أساس قوي في المواد الأساسية.</p><ul><li>تنظيم المذاكرة والمراجعة</li><li>متابعة تعليمات الوزارة والمدرسة</li><li>التخطيط للتنسيق الجامعي وفق القواعد الرسمية</li></ul></article>
-        <article class="path-card featured"><div class="card-number">02</div><span class="tag">مسار تعليمي</span><h3>البكالوريا المصرية</h3><p>نظام تعليمي بمسارات وتخصصات يهدف إلى إتاحة اختيارات تعليمية متنوعة للطلاب.</p><ul><li>التعرف على المسارات والتخصصات المعتمدة</li><li>مقارنة المواد ومتطلبات كل مسار</li><li>الرجوع إلى أحدث القرارات الرسمية قبل الاختيار</li></ul></article>
-      </div>
-      <div class="note"><strong>تنبيه مهم:</strong> تفاصيل المسارات والمواد والكليات المرتبطة بها قد تتغير وفق قرارات وزارة التربية والتعليم ووزارة التعليم العالي. يُرجى اعتماد النشرات الرسمية الأحدث وعدم اتخاذ قرار دراسي بناءً على معلومات غير محدثة.</div>
-    </section>
+<section id="general">
+  <div class="section-title">
+    <h2>الثانوية العامة</h2><div class="line"></div>
+    <p>الاستعداد للمستقبل الجامعي والمهني</p>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <h3>الشعبة العلمية</h3>
+      <p>دراسة العلوم والرياضيات والتأهيل للتخصصات العلمية المختلفة.</p>
+    </div>
+    <div class="card">
+      <h3>الشعبة الأدبية</h3>
+      <p>دراسة العلوم الإنسانية واللغات والتخصصات الأدبية والاجتماعية.</p>
+    </div>
+  </div>
+</section>
 
-    <section class="quote-band"><p>«بالعلم والعمل نرتقي، وبالأخلاق نبني مستقبلًا أفضل»</p><span>مدرسة بهتيم الثانوية بنين</span></section>
+<section class="tracks" id="baccalaureate">
+  <div class="section-title">
+    <h2>البكالوريا المصرية</h2><div class="line"></div>
+    <p>أربعة مسارات تعليمية متنوعة</p>
+  </div>
+  <div class="cards">
+    <div class="card track">
+      <h3>الطب وعلوم الحياة</h3>
+      <p>مسار يهتم بالعلوم الحيوية والصحية ومجالات الطب وعلوم الحياة.</p>
+    </div>
+    <div class="card track">
+      <h3>الهندسة وعلوم الحاسب</h3>
+      <p>مسار يهتم بالتكنولوجيا والهندسة والبرمجة وعلوم الحاسب.</p>
+    </div>
+    <div class="card track">
+      <h3>الأعمال</h3>
+      <p>مسار يهتم بالاقتصاد والإدارة والمحاسبة وريادة الأعمال.</p>
+    </div>
+    <div class="card track">
+      <h3>الآداب والفنون</h3>
+      <p>مسار يهتم باللغات والعلوم الإنسانية والإبداع والفنون.</p>
+    </div>
+  </div>
+</section>
 
-    <section class="section contact-section" id="contact">
-      <div class="section-heading"><span>يسعدنا تواصلكم</span><h2>تواصل مع المدرسة</h2><p>للاستفسارات والتواصل، يمكنكم الاتصال بمسؤولة التواصل المدرسي.</p></div>
-      <div class="contact-card">
-        <div><small>مسؤولة التواصل</small><h3>الأستاذة سمر مصطفى</h3><p>للاستفسارات المتعلقة بالمدرسة</p></div>
-        <a class="phone" href="tel:+201103805543" dir="ltr">+20 11 03805543</a>
-        <a class="btn primary" href="https://wa.me/201103805543" target="_blank" rel="noopener">تواصل عبر واتساب</a>
-      </div>
-    </section>
-  </main>
+<section id="subjects">
+  <div class="section-title">
+    <h2>المواد الدراسية</h2><div class="line"></div>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <h3>المواد الأساسية</h3>
+      <p>المواد العامة المشتركة وفق نظام الدراسة والصف الدراسي.</p>
+    </div>
+    <div class="card">
+      <h3>المواد التخصصية</h3>
+      <p>مواد مرتبطة بالمسار الدراسي الذي يختاره الطالب.</p>
+    </div>
+    <div class="card">
+      <h3>المصادر التعليمية</h3>
+      <p>يرجى متابعة المصادر الرسمية لمعرفة المناهج والتحديثات المعتمدة.</p>
+    </div>
+  </div>
+</section>
 
-  <footer><img src="assets/school-logo.svg" alt="" ><div><strong>مدرسة بهتيم الثانوية بنين</strong><small>إدارة شرق شبرا الخيمة التعليمية</small></div><p>© <span id="year"></span> جميع الحقوق محفوظة</p></footer>
-  <script src="script.js"></script>
+<section class="announcements" id="announcements">
+  <div class="section-title">
+    <h2>الإعلانات والأخبار</h2><div class="line"></div>
+  </div>
+  <div class="cards">
+    <div class="card notice">
+      <h3>تابع أخبار المدرسة</h3>
+      <p>سيتم نشر الإعلانات والتعليمات المهمة للطلاب وأولياء الأمور هنا.</p>
+    </div>
+    <div class="card notice">
+      <h3>التحديثات الدراسية</h3>
+      <p>تابع آخر المستجدات المتعلقة بالعملية التعليمية والأنشطة المدرسية.</p>
+    </div>
+  </div>
+</section>
+
+<section class="management" id="management">
+  <div class="section-title">
+    <h2>إدارة المدرسة</h2><div class="line"></div>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <h3>الأستاذ مجدي علي حسن</h3>
+      <p class="role">مدير المدرسة</p>
+    </div>
+    <div class="card">
+      <h3>الأستاذة سمر مصطفى</h3>
+      <p class="role">مسؤولة التواصل</p>
+      <p>للاستفسارات، يرجى التواصل عبر القنوات الرسمية للمدرسة.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <strong>مدرسة بهتيم الثانوية بنين</strong>
+  <p>العلم أساس التقدم وبناء المستقبل</p>
+  <p>© جميع الحقوق محفوظة للمدرسة</p>
+</footer>
+
 </body>
 </html>
